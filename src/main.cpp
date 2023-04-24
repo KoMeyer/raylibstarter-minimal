@@ -8,6 +8,19 @@
 #include "Player.h"
 #include "Dirt.h"
 
+/*
+ * TO-DO List:
+ * Create new classes for:
+ * Memories (cpp  and h)
+ * Boulder (cpp and h)
+ * Sprite (for texture loading, updating etc.)
+ * Screen (for window creation etc)
+ * Controller (cpp and h; for movement, collision...)
+ *
+ * To work on a copy void name(int & x) {} <-- durch das & wird das original bearbeitet
+ */
+
+
 int main() {
     // Raylib initialization
     // Project name, screen size, fullscreen mode etc. can be specified in the config.h.in file
@@ -28,8 +41,7 @@ int main() {
 
     //create the player
     Game::Player player = *new Game::Player(0, 0);
-    Game::Dirt dirt;
-    dirt.setPos(600, 300);
+    Game::Dirt dirt = *new Game::Dirt(600, 300);
 
     //create all the dirt
 

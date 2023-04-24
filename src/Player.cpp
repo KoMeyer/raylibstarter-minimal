@@ -6,6 +6,11 @@
 
 #include "Player.h"
 
+/*                          -=- TASK FOR PERSON-=-
+ *                          -=- Add Animation for player -=-
+ *                          -=- Use frames for texture change -=-
+ */
+
 Game::Player::Player(int playerX, int playerY)  {
     setPos(playerX, playerY);
 }
@@ -14,11 +19,13 @@ void Game::Player::move() {
     //grabbing commands implemented in the checks (destroy dirt/ grab memory from adjacent space)
     Vector2 check;
 
-    if(IsKeyDown(KEY_LEFT_CONTROL) || IsKeyDown(KEY_RIGHT_CONTROL)) {
+    //Idle Animation
+
+    if(IsKeyDown(KEY_LEFT_CONTROL) || IsKeyDown(KEY_RIGHT_CONTROL)) { //Grabbing/Digging next to  player
         if (IsKeyDown(KEY_W)) {
             check.x = getPos().x;
             check.y = getPos().y - speed;
-            if(spaceAvailable(check)) {}
+            //if(spaceAvailable(check)) {}
         } else if (IsKeyDown(KEY_A)) {
             check.x = getPos().x - speed;
             check.y = getPos().y;
@@ -44,18 +51,21 @@ void Game::Player::move() {
             check.y = getPos().y;
             if (spaceAvailable(check)) {
                 pos.x -= speed;
+                //Animation
             }
         } else if (IsKeyDown(KEY_S)) {
             check.x = getPos().x + speed;
             check.y = getPos().y;
             if (spaceAvailable(check)) {
                 pos.y += speed;
+                //Animation
             }
         } else if (IsKeyDown(KEY_D)) {
             check.x = getPos().x;
             check.y = getPos().y + speed;
             if (spaceAvailable(check)) {
                 pos.x += speed;
+                //Animation
             }
         }
     }

@@ -8,9 +8,7 @@ Game::Dirt::Dirt(int dirtX, int dirtY)  {
     setPos(dirtX, dirtY);
 }
 
-Game::Dirt::Dirt() {
-
-}
+//Game::Dirt::Dirt() {} Not used
 
 Vector2 Game::Dirt::getPos()  {
     return pos;

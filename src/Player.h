@@ -9,6 +9,13 @@
 
 #endif //RAYLIBSTARTER_PLAYER_H
 
+/*
+ * TO-DO List:
+ * Change movement and similar functions to controller class
+ * Add integer for collected memories
+ * When memory collected increase the integer (don't do this yet)
+ */
+
 namespace Game {
     struct Player{
     public:
@@ -19,7 +26,7 @@ namespace Game {
         Texture2D player= LoadTexture("assets/graphics/cat.png");
 
         int lives = 3;
-        int speed = 25; //A tile is 25 pixels big
+        int speed = 24; //A tile is 24 pixels big
 
         void move();
 
